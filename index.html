@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>اخراجات ٹریکر پرو</title>
+<link rel="manifest" href="manifest.json">
+<style>
+body{font-family:sans-serif;max-width:900px;margin:auto;padding:15px}
+.card{border:1px solid #ccc;border-radius:10px;padding:10px;margin:10px 0}
+input,select,button{padding:8px;margin:4px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ddd;padding:8px}
+</style>
+</head>
+<body>
+<h1>روزانہ آمدنی و اخراجات</h1>
+
+<div class="card">
+<input id="desc" placeholder="تفصیل">
+<input id="amount" type="number" placeholder="رقم">
+<select id="cat">
+<option>کھانا</option>
+<option>سفر</option>
+<option>کرایہ</option>
+<option>دوائی</option>
+<option>دیگر</option>
+</select>
+<select id="type">
+<option value="income">آمدنی</option>
+<option value="expense">خرچ</option>
+</select>
+<button onclick="addTxn()">محفوظ کریں</button>
+<button onclick="exportCSV()">CSV Export</button>
+</div>
+
+<div class="card">
+<p>کل آمدنی: ₹ <span id="income">0</span></p>
+<p>کل خرچ: ₹ <span id="expense">0</span></p>
+<p>بقیہ: ₹ <span id="balance">0</span></p>
+</div>
+
+<input id="search" placeholder="تلاش کریں" oninput="render()">
+
+<table>
+<thead><tr><th>تفصیل</th><th>قسم</th><th>کیٹیگری</th><th>رقم</th><th>حذف</th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+
+<script src="app.js"></script>
+</body>
+</html>
