@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Learning Tracker</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-header">
+  <h1>CSS Fundamentals</h1>
+  <p>From Basics to Layout Thinking</p>
+</header>
+<button id="darkToggle" class="dark-btn">🌙 Dark Mode</button>
+
+  <div class="container">
+
+    <h1>CSS Fundamentals – From Basics to Layout Thinking</h1>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+      <div>
+        <strong>Day</strong><br>
+        1
+      </div>
+      <div>
+        <strong>Completed</strong><br>
+        Stage 1
+      </div>
+      <div>
+        <strong>Status</strong><br>
+        Active
+      </div>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+
+    <!-- TOPICS COVERED -->
+    <section>
+      <h2>✅ Topics Covered</h2>
+
+      <!-- STAGE 1 -->
+      <div class="stage">
+        <button class="stage-btn">Stage 1 – CSS Basics</button>
+
+        <div class="lessons">
+          <button class="lesson-btn" data-note="l1">Lesson 1 – Syntax & Selectors</button>
+          <button class="lesson-btn" data-note="l2">Lesson 2 – Colors & Units</button>
+          <button class="lesson-btn" data-note="l3">Lesson 3 – Box Model</button>
+          <button class="lesson-btn" data-note="l4">Lesson 4 – Display</button>
+          <button class="lesson-btn" data-note="l5">Lesson 5 – Overflow & Visibility</button>
+        </div>
+      </div>
+
+      <!-- STAGE 2 -->
+      <div class="stage">
+        <button class="stage-btn">Stage 2 – Layout</button>
+        <div class="lessons">
+          <p class="not-started">Not started yet</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- NOTES -->
+    <section>
+      <h2>📝 Lesson Notes</h2>
+      <div id="notes-box">
+        Click a lesson to see notes here.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
